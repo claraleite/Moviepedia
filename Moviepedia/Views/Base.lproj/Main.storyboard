@@ -12,7 +12,7 @@
         <!--Featured-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Featured" id="BYZ-38-t0r" customClass="ViewController" customModule="Moviepedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Featured" id="BYZ-38-t0r" customClass="FeaturedViewController" customModule="Moviepedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1231"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pba-Tb-nzG">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="pba-Tb-nzG" customClass="PopularCollectionViewCell" customModule="Moviepedia" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="0.0" width="200" height="140"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4ah-gJ-thC">
@@ -96,6 +96,10 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="200" height="140"/>
+                                                                <connections>
+                                                                    <outlet property="image" destination="Mcj-0Q-NeI" id="zvu-yA-suR"/>
+                                                                    <outlet property="titleLabel" destination="Akb-f4-RrQ" id="ujj-Gz-XbN"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -146,7 +150,7 @@
                                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q9Q-rl-8vz">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="" id="q9Q-rl-8vz" customClass="NowPlayingCollectionViewCell" customModule="Moviepedia" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="251" height="114"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R0K-OU-mXu">
@@ -192,6 +196,11 @@
                                                                         <constraint firstAttribute="bottom" secondItem="xvf-pS-HWg" secondAttribute="bottom" constant="12" id="qgg-hy-oBE"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="dateLabel" destination="EAH-RI-eWw" id="Zo8-yb-nMG"/>
+                                                                    <outlet property="image" destination="YVZ-Gm-9T6" id="2BE-YT-dHh"/>
+                                                                    <outlet property="titleLabel" destination="Cy0-jk-i7D" id="eGx-M9-xNt"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -242,13 +251,45 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="obh-3d-PUT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="obh-3d-PUT" customClass="UpcomingCollectionViewCell" customModule="Moviepedia" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="299"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XMb-F5-Rcm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="299"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-t7-Ds6">
+                                                                            <rect key="frame" x="8" y="8" width="184" height="258.5"/>
+                                                                        </imageView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="g26-nn-33b">
+                                                                            <rect key="frame" x="8" y="270.5" width="184" height="20.5"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRT-JY-p2I">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="20.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="&lt;dateLabel&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsa-D2-Mi6">
+                                                                                    <rect key="frame" x="88" y="0.0" width="96" height="20.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <color key="textColor" systemColor="systemGray4Color"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="g26-nn-33b" firstAttribute="leading" secondItem="XMb-F5-Rcm" secondAttribute="leading" constant="8" id="F77-e7-EP8"/>
+                                                                        <constraint firstItem="xO2-t7-Ds6" firstAttribute="leading" secondItem="XMb-F5-Rcm" secondAttribute="leading" constant="8" id="O7X-eX-K8P"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="xO2-t7-Ds6" secondAttribute="trailing" constant="8" id="OMU-D7-mDq"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="g26-nn-33b" secondAttribute="bottom" constant="8" id="RqL-zj-kFL"/>
+                                                                        <constraint firstItem="g26-nn-33b" firstAttribute="top" secondItem="xO2-t7-Ds6" secondAttribute="bottom" constant="4" id="XFs-5B-S2P"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="g26-nn-33b" secondAttribute="trailing" constant="8" id="lIg-YU-sfT"/>
+                                                                        <constraint firstItem="xO2-t7-Ds6" firstAttribute="top" secondItem="XMb-F5-Rcm" secondAttribute="top" constant="8" id="xn3-nH-BaR"/>
+                                                                    </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <size key="customSize" width="200" height="299"/>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -279,6 +320,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Featured" id="Itc-5x-WIF"/>
                     <size key="freeformSize" width="414" height="1231"/>
+                    <connections>
+                        <outlet property="nowPlayingCollectionView" destination="bGl-DO-rwR" id="sZI-R3-0eV"/>
+                        <outlet property="popularCollectionView" destination="Spn-vi-556" id="lMS-3z-UKY"/>
+                        <outlet property="upcomingCollectionView" destination="6GC-nA-2ED" id="2yr-6k-tob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +336,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="01V-rG-nYI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wAR-KM-1qm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
