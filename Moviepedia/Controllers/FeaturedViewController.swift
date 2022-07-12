@@ -8,8 +8,11 @@
 import UIKit
 
 class FeaturedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
-
+    
+    let popularMovies = Movie.popularMovies()
+    let nowPlayingMovies = Movie.nowPlayingMovies()
+    let upcomingMovies = Movie.upcomingMovies()
+    
     @IBOutlet var popularCollectionView: UICollectionView!
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
     @IBOutlet var upcomingCollectionView: UICollectionView!
@@ -19,22 +22,28 @@ class FeaturedViewController: UIViewController, UICollectionViewDataSource, UICo
         
         popularCollectionView.dataSource = self
         popularCollectionView.delegate = self
+        
+        nowPlayingCollectionView.dataSource = self
+        nowPlayingCollectionView.delegate = self
+        
+        upcomingCollectionView.dataSource = self
+        upcomingCollectionView.delegate = self
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        
+        if collectionView == self.popularCollectionView {
+            return popularMovies.count
+        } else if collectionView == nowPlayingCollectionView {
+            return nowPlayingMovies.count
+        } else if collectionView == upcomingCollectionView {
+            return upcomingMovies.count
+        } else {
+            return 0
+        }
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as?    PopularCollectionViewCell
-        
-        cell?.titleLabel.text = "Doutor Estranho no Multiverso da Loucura"
-        cell?.image.image = UIImage(named: "Doutor Estranho no Multiverso da Loucura")
-        
-        return cell ?? UICollectionViewCell()
-    }
     
-
-
 }
-
