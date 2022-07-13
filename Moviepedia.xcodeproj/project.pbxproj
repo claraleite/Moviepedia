@@ -14,6 +14,8 @@
 		C13E2C2328732D7E003A7BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13E2C2228732D7E003A7BED /* Assets.xcassets */; };
 		C13E2C2628732D7E003A7BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13E2C2428732D7E003A7BED /* LaunchScreen.storyboard */; };
 		C14CAE31287DC15C0070CE9C /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CAE30287DC15C0070CE9C /* FeaturedViewController+UICollectionViewDataSource.swift */; };
+		C14CAE33287EF2110070CE9C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CAE32287EF2110070CE9C /* DetailsViewController.swift */; };
+		C14CAE35287EF49A0070CE9C /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CAE34287EF49A0070CE9C /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		C1F7CFA0287C45DA00A9AA5D /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7CF9F287C45DA00A9AA5D /* PopularCollectionViewCell.swift */; };
 		C1F7CFA4287C473500A9AA5D /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7CFA3287C473500A9AA5D /* NowPlayingCollectionViewCell.swift */; };
 		C1F7CFA8287C4A8700A9AA5D /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7CFA7287C4A8700A9AA5D /* UpcomingCollectionViewCell.swift */; };
@@ -35,6 +37,8 @@
 		C13E2C2528732D7E003A7BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13E2C2728732D7E003A7BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C14CAE30287DC15C0070CE9C /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		C14CAE32287EF2110070CE9C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C14CAE34287EF49A0070CE9C /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		C1F7CF9F287C45DA00A9AA5D /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1F7CFA3287C473500A9AA5D /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1F7CFA7287C4A8700A9AA5D /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			children = (
 				C13E2C1D28732D7E003A7BED /* FeaturedViewController.swift */,
 				C14CAE30287DC15C0070CE9C /* FeaturedViewController+UICollectionViewDataSource.swift */,
+				C14CAE32287EF2110070CE9C /* DetailsViewController.swift */,
+				C14CAE34287EF49A0070CE9C /* FeaturedViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 				C1F7CFA4287C473500A9AA5D /* NowPlayingCollectionViewCell.swift in Sources */,
 				C1F7CFA0287C45DA00A9AA5D /* PopularCollectionViewCell.swift in Sources */,
 				C13E2C1E28732D7E003A7BED /* FeaturedViewController.swift in Sources */,
+				C14CAE35287EF49A0070CE9C /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
+				C14CAE33287EF2110070CE9C /* DetailsViewController.swift in Sources */,
 				C13E2C1A28732D7E003A7BED /* AppDelegate.swift in Sources */,
 				C13E2C1C28732D7E003A7BED /* SceneDelegate.swift in Sources */,
 			);

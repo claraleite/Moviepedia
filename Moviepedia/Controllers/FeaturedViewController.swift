@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class FeaturedViewController: UIViewController {
     
     let popularMovies = Movie.popularMovies()
     let nowPlayingMovies = Movie.nowPlayingMovies()
@@ -29,6 +29,14 @@ class FeaturedViewController: UIViewController, UICollectionViewDataSource, UICo
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            // quando entra no if a gente sabe que é de fato o details
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

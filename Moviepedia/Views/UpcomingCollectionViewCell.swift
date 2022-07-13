@@ -9,7 +9,9 @@ import UIKit
 
 class UpcomingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var image: UIImageView!
+    static let cellIdentifier = "upcomingCell"
+    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
 }
