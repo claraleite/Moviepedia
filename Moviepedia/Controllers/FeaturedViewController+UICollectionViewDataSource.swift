@@ -11,8 +11,8 @@ extension FeaturedViewController: UICollectionViewDataSource {
     fileprivate func makePopularCell(_ indexPath: IndexPath) -> PopularCollectionViewCell {
         let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell
         
-        cell?.titleLabel.text = popularMovies[indexPath.item].title
-        cell?.imageView.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+        cell?.setup(title: popularMovies[indexPath.item].title, image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
+        
         
         return cell ?? PopularCollectionViewCell()
     }
@@ -20,10 +20,11 @@ extension FeaturedViewController: UICollectionViewDataSource {
     fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
         let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell
         
-        cell?.titleLabel.text = nowPlayingMovies[indexPath.item].title
-        cell?.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
         let year: String = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
-        cell?.dateLabel.text = year
+
+        
+        cell?.setup(title: nowPlayingMovies[indexPath.item].title, year: year, image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ?? UIImage())
+        
         
         return cell ?? NowPlayingCollectionViewCell()
     }
@@ -31,10 +32,9 @@ extension FeaturedViewController: UICollectionViewDataSource {
     fileprivate func makeUpcomingCell(_ indexPath: IndexPath) -> UpcomingCollectionViewCell {
         let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell
         
-        cell?.titleLabel.text = upcomingMovies[indexPath.item].title
-        cell?.imageView.image = UIImage(named: upcomingMovies[indexPath.item].poster)
         let year: String = String(upcomingMovies[indexPath.item].releaseDate.prefix(4))
-        cell?.dateLabel.text = year
+        
+        cell?.setup(title: upcomingMovies[indexPath.item].title, year: year, image: UIImage(named: upcomingMovies[indexPath.item].poster) ?? UIImage())
         
         return cell ?? UpcomingCollectionViewCell()
     }
