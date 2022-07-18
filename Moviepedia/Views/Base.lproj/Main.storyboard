@@ -33,21 +33,20 @@
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fE-Bc-rbz">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="314.5" height="50"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-qg-HEi">
-                                                                        <rect key="frame" x="314" y="0.0" width="68.5" height="50"/>
+                                                                        <rect key="frame" x="315.5" y="0.0" width="67" height="50"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See All"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="See all"/>
                                                                         <connections>
                                                                             <segue destination="Wrx-bv-ioY" kind="show" id="hX4-c4-Yy6"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.87854883049999999" green="0.7451113009" blue="0.97541662539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -118,18 +117,17 @@
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-Hr-ytb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="314.5" height="50"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOF-6V-vSd">
-                                                                        <rect key="frame" x="314" y="0.0" width="68.5" height="50"/>
+                                                                        <rect key="frame" x="315.5" y="0.0" width="67" height="50"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See All"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="See all"/>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.90069085120000003" green="0.7638903024" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -219,18 +217,17 @@
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-r0-fX8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="314.5" height="50"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="146-oi-AvF">
-                                                                        <rect key="frame" x="314" y="0.0" width="68.5" height="50"/>
+                                                                        <rect key="frame" x="315.5" y="0.0" width="67" height="50"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See All"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="See all"/>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.90069085120000003" green="0.7638903024" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -551,6 +548,9 @@
                                     <segment title="Today"/>
                                     <segment title="This Week"/>
                                 </segments>
+                                <connections>
+                                    <action selector="trendingChanged:" destination="Q45-SI-IpG" eventType="valueChanged" id="896-He-q58"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="exa-ie-izm">
                                 <rect key="frame" x="0.0" y="143" width="414" height="1125"/>
@@ -562,7 +562,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OUg-Hm-Aeg">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingCell" id="OUg-Hm-Aeg" customClass="TrendingCollectionViewCell" customModule="Moviepedia" customModuleProvider="target">
                                         <rect key="frame" x="19.5" y="0.0" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Yas-xg-fvF">
@@ -576,7 +576,7 @@
                                                         <constraint firstAttribute="height" constant="90" id="x0e-oq-OJg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="joe-Uo-mmj" userLabel="TrendingStackView">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="joe-Uo-mmj" userLabel="TrendingStackView">
                                                     <rect key="frame" x="92" y="8" width="214" height="98"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ1-0W-Mwg">
@@ -585,12 +585,17 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="&lt;dateLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deA-nz-YBH">
-                                                            <rect key="frame" x="0.0" y="69.5" width="96" height="28.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" systemColor="systemGray4Color"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-F1-tl1">
+                                                            <rect key="frame" x="0.0" y="28.5" width="96" height="69.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="&lt;dateLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deA-nz-YBH">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" systemColor="systemGray4Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oap-Pg-6or">
@@ -613,6 +618,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="oap-Pg-6or" secondAttribute="trailing" constant="16" id="wp4-6x-UOt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="deA-nz-YBH" id="sGJ-TH-962"/>
+                                            <outlet property="imageView" destination="xv2-su-MI3" id="XHh-bV-8a9"/>
+                                            <outlet property="titleLabel" destination="yJ1-0W-Mwg" id="Hm4-kl-bSi"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -631,6 +641,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Trending" id="oVH-0q-Myt"/>
                     <size key="freeformSize" width="414" height="1268"/>
+                    <connections>
+                        <outlet property="trendingCollectionView" destination="exa-ie-izm" id="i4Q-PT-1Wt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Me-rv-34Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
