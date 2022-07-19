@@ -10,6 +10,7 @@ import UIKit
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     
+    @IBOutlet var guideLabel: UIView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var resultsTableView: UITableView!
     
@@ -29,6 +30,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         filteredData = allMovies
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = resultsTableView.indexPathForSelectedRow {
+               resultsTableView.deselectRow(at: selectedIndexPath, animated: animated)
+           }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,6 +80,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         Task {
             allMovies = await Movie.searchAPI(section: searchText)
+            guideLabel.isHidden = true
             self.resultsTableView.reloadData()
         }
         
@@ -83,6 +92,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 filteredData.append(movie)
                 }
             }
+            guideLabel.isHidden = true
             self.resultsTableView.reloadData()
         }
             

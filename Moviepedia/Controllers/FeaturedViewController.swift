@@ -12,6 +12,7 @@ class FeaturedViewController: UIViewController {
     var popularMovies: [Movie] = [] //Movie.popularMovies()
     var nowPlayingMovies: [Movie] = [] //Movie.nowPlayingMovies()
     var upcomingMovies: [Movie] = [] //Movie.upcomingMovies()
+    var romanceMovies: [Movie] = []
     
     @IBOutlet var popularCollectionView: UICollectionView!
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
@@ -32,6 +33,11 @@ class FeaturedViewController: UIViewController {
         
         Task {
             popularMovies = await Movie.moviesAPI(section: "popular")
+//            for movie in popularMovies {
+//                if movie.genreIds.contains(35) {
+//                    romanceMovies.append(movie)
+//                }
+//            }
             self.popularCollectionView.reloadData()
             
         }

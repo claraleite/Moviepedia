@@ -35,6 +35,13 @@ class SeeAllTableViewController: UIViewController {
 
 
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = seeAllTableView.indexPathForSelectedRow {
+               seeAllTableView.deselectRow(at: selectedIndexPath, animated: animated)
+           }
+    }
 }
     
 
@@ -68,12 +75,6 @@ extension SeeAllTableViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            if let selectedIndexPath = seeAllTableView.indexPathForSelectedRow {
-                   seeAllTableView.deselectRow(at: selectedIndexPath, animated: animated)
-               }
-        }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie: Movie
