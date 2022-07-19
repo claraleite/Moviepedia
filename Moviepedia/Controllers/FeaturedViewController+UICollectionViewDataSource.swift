@@ -14,7 +14,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell
         
         let movie = popularMovies[indexPath.item]
-        cell?.setup(title: movie.title, image: UIImage())
+        cell?.setup(title: movie.title, image: UIImage(named: "Group 1") ?? UIImage())
 
         
         Task {
@@ -31,7 +31,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
         let year: String = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
         let movie = nowPlayingMovies[indexPath.item]
-        cell?.setup(title: movie.title, year: year, image: UIImage())
+        cell?.setup(title: movie.title, year: year, image: UIImage(named: "Group 2") ?? UIImage())
         
         Task {
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
@@ -51,7 +51,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
         let year: String = String(upcomingMovies[indexPath.item].releaseDate.prefix(4))
         let movie = upcomingMovies[indexPath.item]
-        cell?.setup(title: movie.title, year: year, image: UIImage())
+        cell?.setup(title: movie.title, year: year, image: UIImage(named: "Group 2") ?? UIImage())
         
         Task {
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath)

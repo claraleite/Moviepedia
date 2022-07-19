@@ -20,6 +20,7 @@ class FeaturedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         popularCollectionView.dataSource = self
         popularCollectionView.delegate = self
         
@@ -46,8 +47,6 @@ class FeaturedViewController: UIViewController {
             self.upcomingCollectionView.reloadData()
         }
         
-
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,6 +55,21 @@ class FeaturedViewController: UIViewController {
             let movie = sender as? Movie
             destination.movie = movie
         }
+        if let destination = segue.destination as? SeeAllTableViewController {
+            if segue.identifier == "seeAllPopular" {
+                destination.movies = popularMovies
+                destination.title = "Popular"
+            }
+            else if segue.identifier == "seeAllNowPlaying" {
+                destination.movies = nowPlayingMovies
+                destination.title = "Now Playing"
+                
+            }
+            else {
+                destination.movies = upcomingMovies
+                destination.title = "Upcoming"
+            }
+    }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -37,6 +37,8 @@ class DetailsViewController: UIViewController {
         }
         
         title = movie.title
+        headerImageView.image = UIImage(named: "Group 1")
+        posterImageView.image = UIImage(named: "Group 2")
         titleLabel.text = movie.title
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
@@ -44,5 +46,9 @@ class DetailsViewController: UIViewController {
         
     }
     
+    
+    
+    
+   
+    }
 
-}

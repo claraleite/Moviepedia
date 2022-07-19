@@ -1,26 +1,25 @@
 //
-//  SeeAllTableViewCell.swift
+//  SearchTableViewCell.swift
 //  Moviepedia
 //
-//  Created by mccl on 15/07/22.
+//  Created by mccl on 19/07/22.
 //
 
 import UIKit
 
-class SeeAllTableViewCell: UITableViewCell {
+class SearchTableViewCell: UITableViewCell {
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var poster: UIImageView!
+    
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var imagePoster: UIImageView!
     
-    func setup(title: String, image: UIImage, year: String, rate: String) {
+    func setup(title: String, image: UIImage, year: String) {
         titleLabel.text = title
-        poster.image = image
+        imagePoster.image = image
         dateLabel.text = year
-        ratingLabel.text = rate
     }
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

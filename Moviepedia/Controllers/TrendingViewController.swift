@@ -11,6 +11,7 @@ class TrendingViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var trendingThisWeek: [Movie] = [] //Movie.trendingThisWeekMovies()
     var trendingToday: [Movie] = [] //Movie.trendingTodayMovies()
+    var trendingArray: [Movie] = [] // Master array
     
     @IBOutlet var trendingCollectionView: UICollectionView!
     
@@ -19,14 +20,34 @@ class TrendingViewController: UIViewController, UICollectionViewDataSource, UICo
         
         trendingCollectionView.dataSource = self
         trendingCollectionView.delegate = self
+        
+        Task {
+            trendingToday = await Movie.trendingAPI(section: "movie/day")
+            trendingArray = trendingToday
+            self.trendingCollectionView.reloadData()
+        }
 
    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let destination = segue.destination as? DetailsViewController {
+                    let movie = sender as? Movie
+                    destination.movie = movie
+
+            }
+
+
+        }
+
+    
+    
     @IBAction func trendingChanged(_ sender: UISegmentedControl) {
             switch sender.selectedSegmentIndex {
             case 0: // caso em que o trending é today
                 
                 Task {
                     trendingToday = await Movie.trendingAPI(section: "movie/day")
+                    trendingArray = trendingToday
                     self.trendingCollectionView.reloadData()
                 }
                 
@@ -35,21 +56,21 @@ class TrendingViewController: UIViewController, UICollectionViewDataSource, UICo
                  
                 Task {
                     trendingThisWeek = await Movie.trendingAPI(section: "movie/week")
+                    trendingArray = trendingThisWeek
                     self.trendingCollectionView.reloadData()
                 }
-                
                 
             default:
                 print("Entrou no default")
             }
         }
     
-    fileprivate func makeTrendingTodayCell(_ indexPath: IndexPath) -> TrendingCollectionViewCell {
+    fileprivate func makeTrendingCell(_ indexPath: IndexPath) -> TrendingCollectionViewCell {
         let cell = trendingCollectionView.dequeueReusableCell(withReuseIdentifier: TrendingCollectionViewCell.cellIdentifier, for: indexPath) as? TrendingCollectionViewCell
         
-        let year: String = String(trendingToday[indexPath.item].releaseDate.prefix(4))
-        let movie = trendingToday[indexPath.item]
-        cell?.setup(title: movie.title, year: year, image: UIImage())
+        let year: String = String(trendingArray[indexPath.item].releaseDate.prefix(4))
+        let movie = trendingArray[indexPath.item]
+        cell?.setup(title: movie.title, year: year, image: UIImage(named: "Group 2") ?? UIImage())
         
         Task {
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
@@ -66,15 +87,19 @@ class TrendingViewController: UIViewController, UICollectionViewDataSource, UICo
         
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return trendingToday.count
+        return trendingArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return makeTrendingTodayCell(indexPath)
+            return makeTrendingCell(indexPath)
+            
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie: Movie
+        movie = trendingArray[indexPath.item]
+        performSegue(withIdentifier: "trendingToDetailsSegue", sender: movie)
 
-    
+    }
 
 }
