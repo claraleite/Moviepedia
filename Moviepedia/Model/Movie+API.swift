@@ -103,6 +103,35 @@ extension Movie {
         return []
     }
     
+    static func genresAPI() async -> [GenreId] {
+        var components = Movie.urlComponents
+        components.path = "/3/genre/movie/list"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR"),
+        ]
+        
+        let session = URLSession.shared
+        
+        
+        do {
+            let (data, _) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            let movieResult = try decoder.decode(GenreResponse.self, from: data)
+            
+            return movieResult.genres
+            
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
     // MARK: - Download de imagens
     
     

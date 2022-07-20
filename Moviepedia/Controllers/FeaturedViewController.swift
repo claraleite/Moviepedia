@@ -33,11 +33,6 @@ class FeaturedViewController: UIViewController {
         
         Task {
             popularMovies = await Movie.moviesAPI(section: "popular")
-//            for movie in popularMovies {
-//                if movie.genreIds.contains(35) {
-//                    romanceMovies.append(movie)
-//                }
-//            }
             self.popularCollectionView.reloadData()
             
         }

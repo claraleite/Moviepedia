@@ -16,5 +16,4 @@ struct Movie: Codable {
     let overview: String
     let genreIds: [Int]
     
-    
 }

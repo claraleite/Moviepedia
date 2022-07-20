@@ -15,7 +15,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var overviewLabel: UILabel!
+    @IBOutlet var genresLabel: UILabel!
     
+    var genreArray: [GenreId] = []
+    var genreNameArray: [String] = []
+    var genresString: String = ""
     
     var movie: Movie?
 
@@ -44,11 +48,45 @@ class DetailsViewController: UIViewController {
         overviewLabel.text = movie.overview
         
         
+        Task {
+            genreArray = await Movie.genresAPI()
+            for item in genreArray {
+                if movie.genreIds.contains(item.id) {
+                    genreNameArray.append(item.name)
+                }
+            }
+            
+            for i in 0..<genreNameArray.count {
+                genresString = "\(genresString)\n\(genreNameArray[i])"
+            }
+            
+            genresLabel.text = genresString
+            
+            print(genresString)
+            print(genreArray)
+            print(genreNameArray)
+
+        }
+        
+//        print("Genero vazia \(genreArray)")
+//        print(movie.genreIds)
+//
+//        if movie.genreIds.contains(28) {
+//            print("yes")
+//            genreNameArray.append("Adventure")
+//        }
+//
+////        for item in genreArray {
+////            if movie.genreIds.contains(item.id) {
+////                genreNameArray.append(item.name)
+////            }
+////        }
+//        print(genreNameArray)
+//        genresLabel.text = genreNameArray[0]
+//
+//        }
+        
     }
-    
-    
-    
-    
    
-    }
+}
 

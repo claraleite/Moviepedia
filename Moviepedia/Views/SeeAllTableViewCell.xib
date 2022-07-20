@@ -20,6 +20,10 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uf2-zc-Sw7">
                         <rect key="frame" x="16" y="12" width="60" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="HhC-wJ-zBR"/>
+                            <constraint firstAttribute="width" constant="60" id="Kik-XL-PiQ"/>
+                        </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9FH-LE-6fd">
                         <rect key="frame" x="92" y="12" width="200" height="90"/>
