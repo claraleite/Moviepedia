@@ -34,16 +34,16 @@
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fE-Bc-rbz">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="306.5" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="50"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-qg-HEi">
-                                                                        <rect key="frame" x="307.5" y="0.0" width="75" height="50"/>
+                                                                        <rect key="frame" x="294.5" y="0.0" width="88" height="50"/>
                                                                         <color key="tintColor" name="Color"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver tudo">
                                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
@@ -120,17 +120,17 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="siy-Hg-bTu">
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-Hr-ytb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="306.5" height="50"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Em Cartaz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-Hr-ytb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="50"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOF-6V-vSd">
-                                                                        <rect key="frame" x="307.5" y="0.0" width="75" height="50"/>
+                                                                        <rect key="frame" x="294.5" y="0.0" width="88" height="50"/>
                                                                         <color key="tintColor" name="Color"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver tudo">
                                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
@@ -226,17 +226,17 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="d6N-HW-uML">
                                                                 <rect key="frame" x="16" y="0.0" width="382.5" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-r0-fX8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="306.5" height="50"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Em breve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-r0-fX8">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="50"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="146-oi-AvF">
-                                                                        <rect key="frame" x="307.5" y="0.0" width="75" height="50"/>
+                                                                        <rect key="frame" x="294.5" y="0.0" width="88" height="50"/>
                                                                         <color key="tintColor" name="Color"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver tudo">
                                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
@@ -343,7 +343,7 @@
                             <constraint firstItem="RwW-B8-Uk8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ste-3a-W6u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Featured" id="Itc-5x-WIF"/>
+                    <navigationItem key="navigationItem" title="Destaque" id="Itc-5x-WIF"/>
                     <size key="freeformSize" width="414" height="1231"/>
                     <connections>
                         <outlet property="nowPlayingCollectionView" destination="bGl-DO-rwR" id="sZI-R3-0eV"/>
@@ -576,8 +576,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RM8-pD-chq">
                                 <rect key="frame" x="0.0" y="148" width="414" height="32"/>
                                 <segments>
-                                    <segment title="Today"/>
-                                    <segment title="This Week"/>
+                                    <segment title="Hoje"/>
+                                    <segment title="Essa semana"/>
                                 </segments>
                                 <connections>
                                     <action selector="trendingChanged:" destination="Q45-SI-IpG" eventType="valueChanged" id="896-He-q58"/>
@@ -671,7 +671,7 @@
                             <constraint firstItem="exa-ie-izm" firstAttribute="leading" secondItem="Ptd-3a-wT8" secondAttribute="leading" id="smE-Yv-q6O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Trending" id="oVH-0q-Myt"/>
+                    <navigationItem key="navigationItem" title="Tendência" id="oVH-0q-Myt"/>
                     <size key="freeformSize" width="414" height="1268"/>
                     <connections>
                         <outlet property="trendingCollectionView" destination="exa-ie-izm" id="i4Q-PT-1Wt"/>
@@ -713,7 +713,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-Xp-Iwq" userLabel="ViewLabel">
                                 <rect key="frame" x="0.0" y="207" width="414" height="83"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching for a movie you like" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3E6-Uj-KlB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que tal procurar um filme que você gosta?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3E6-Uj-KlB">
                                         <rect key="frame" x="52" y="32" width="310" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -744,7 +744,7 @@
                             <constraint firstItem="sTH-Xp-Iwq" firstAttribute="leading" secondItem="tv3-0D-fI6" secondAttribute="leading" id="lBP-Hx-Qjr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search movies" id="cPl-ux-YTu"/>
+                    <navigationItem key="navigationItem" title="Busque filmes" id="cPl-ux-YTu"/>
                     <connections>
                         <outlet property="guideLabel" destination="sTH-Xp-Iwq" id="p2J-ix-fuR"/>
                         <outlet property="resultsTableView" destination="5dF-eu-07P" id="4hd-ZV-6rO"/>
@@ -777,11 +777,11 @@
             </objects>
             <point key="canvasLocation" x="-4" y="238"/>
         </scene>
-        <!--Feature-->
+        <!--Destaque-->
         <scene sceneID="Rdp-eo-Zuu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BT8-fB-GtP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feature" image="film" catalog="system" selectedImage="film.fill" id="eEs-vo-Lit"/>
+                    <tabBarItem key="tabBarItem" title="Destaque" image="film" catalog="system" selectedImage="film.fill" id="eEs-vo-Lit"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RWq-qN-XFR">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -803,11 +803,11 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="239.0625"/>
         </scene>
-        <!--Trending-->
+        <!--Tendência-->
         <scene sceneID="znc-Z0-rfW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="04C-SY-nN4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trending" image="flame" catalog="system" selectedImage="flame.fill" id="9Rm-Lj-wvd">
+                    <tabBarItem key="tabBarItem" title="Tendência" image="flame" catalog="system" selectedImage="flame.fill" id="9Rm-Lj-wvd">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" name="Color"/>
@@ -832,11 +832,11 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="-455.35714285714283"/>
         </scene>
-        <!--Search-->
+        <!--Buscar-->
         <scene sceneID="D2Y-Cw-VcZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tXo-cL-DCF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="4kr-D6-oeI"/>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="magnifyingglass" catalog="system" id="4kr-D6-oeI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="PKB-iq-BFj">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -880,7 +880,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kP3-SP-QG4"/>
-        <segue reference="wWu-0j-1sf"/>
+        <segue reference="88Y-dk-jJb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
